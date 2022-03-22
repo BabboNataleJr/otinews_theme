@@ -1,4 +1,4 @@
-# otinews_theme
+# Otinews theme
 A theme for the site OTINEWS a.k.a. Officine Toscane dell'Informazione
 
 ## Officine Toscane dell'Informazione
