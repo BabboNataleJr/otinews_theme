@@ -1,0 +1,10 @@
+{
+    "name": "otinews/otinews_theme",
+    "description": "A journalistic look-alike theme for Officine Toscane dell'Innovazione(otinews)",
+    "version": "1.0",
+    "type": "wordpress-theme",
+    "require": {
+        "composer/installers": "~1.0",
+        "johnpbloch/wordpress-core": "5.4.2"
+    }
+}
