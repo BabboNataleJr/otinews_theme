@@ -5,6 +5,8 @@
      */
     function otinews_add_theme_support(){
         add_theme_support( 'title-tag' );
+        add_theme_support( 'custom-logo' );
+        add_theme_support( 'post-thumbanails' );
     }
 
     add_action( 'after_setup_theme' , 'otinews_add_theme_support' );
