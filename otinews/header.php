@@ -29,10 +29,10 @@
             <div id="otinews-header-menu-conteiner" class="navigation">
                 <?php
                     wp_nav_menu( array(
-                    'menu'                  =>  'otinews-header-menu',
-                    'container'             =>  '',
-                    'theme_location'        =>  'otinews-header-menu',
-                    'items_wrap'            =>  '<ul id="" class=""></ul>'
+                    'menu'              =>  'otinews-header-menu',
+                    'container'         =>  '',
+                    'theme_location'    =>  'otinews-header-menu',
+                    'items_wrap'        =>  '<ul id="" class=""></ul>'
                     ) );
                 ?>
             </div>
