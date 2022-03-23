@@ -6,7 +6,9 @@
                 the_tags('<span class="tag">', '</span><span class="tag">', '</span>');
             ?>
             <span class="comments">
-                <?php comments_number();?>
+                <?php 
+                    comments_number();
+                ?>
             </span>
         </div>
     </header>
