@@ -1,5 +1,4 @@
 <div class="comments-wrapper">
-
     <div class="comments">
         <h2 class="comment-title">
             <?php 
@@ -10,21 +9,16 @@
                 }
             ?>
         </h2>
-
         <div class="comments-inner">
-
             <?php
-            $comment_options = array(
-                'avatar_size'   =>  120,
-                'style'         =>  'div'
-            );
-            wp_list_comments($comment_options)
-        ?>
-
+                $comment_options = array(
+                    'avatar_size'           =>  120,
+                    'style'                 =>  'div'
+                );
+                wp_list_comments($comment_options)
+            ?>
         </div>
-
     </div>
-
     <hr aria-hidden="true">
     <div class="comment-respond">
         <?php 
@@ -38,5 +32,4 @@
             }
         ?>
     </div>
-
 </div>
