@@ -2,16 +2,22 @@
     get_header();
 ?>
 
-<div id="primary" class="content-area pagebuilder-content">
+<article id="article-content" class="content">
 
     <?php
-		while ( have_posts() ) :
-			the_post();
-			the_content();
-		endwhile; // End of the loop.
-		?>
+        if( have_posts() ) :
+            while ( have_posts() ) :
+                the_post();
+                get_template_part('template-parts/content', 'archive');
+            endwhile;
+        endif;
+    ?>
 
-</div><!-- #primary -->
+    <?php 
+    the_posts_pagination();
+?>
+</article>
+
 
 <?php 
     get_footer();

@@ -31,15 +31,36 @@
     add_action('wp_enqueue_scripts', 'otinews_load_scripts');
     
     /**
-     * Add Some Configuration
+     * Add Menu Support
      */
     function otinews_menu_config()
     {
         $locations = array(
-            'otinews-header-menu'      => 'Otinews Header Menu',
-            'otinews-footer-menu'      => 'Otinews Footer Menu'
+            'otinews-header-menu'       => 'Otinews Header Menu',
+            'otinews-footer-menu'       => 'Otinews Footer Menu'
         );
         register_nav_menus( $locations );
     }
 
     add_action( 'init', 'otinews_menu_config' );
+
+
+    /**
+     * Add Widget support
+     * Per sidebar e footer
+     */
+    function otinews_widget_area()
+    {
+        $footer_bar_options = array(
+            'before_title'              => '<h2>',
+            'after_title'               => '</h2>',
+            'before_widget'             => '',
+            'after_widget'              => '',
+            'name'                      => 'Footer Widget Area',
+            'id'                        => 'footer-bar-1',
+            'description'               => 'Footer Widget Area'
+        );
+        register_sidebar($footer_bar_options);
+    }
+
+    add_action('widgets_init', 'otinews_widget_area');

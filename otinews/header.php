@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <header>
         <h1 class="page_title" id="page_title" align="center"><?php the_title()?></h1>
         <nav>
@@ -21,8 +22,9 @@
                     $logo = wp_get_attachment_image_src($custom_logo_id);
                 }
             ?>
-
-            <img src="<?php echo $logo[0]?>" alt="logo">
+            <a href="/" class="">
+                <img src="<?php echo $logo[0]?>" alt="logo">
+            </a>
 
             <div id="otinews-header-menu-conteiner" class="navigation">
                 <?php
