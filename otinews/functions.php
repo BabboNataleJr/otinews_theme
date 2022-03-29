@@ -21,10 +21,12 @@
 
         //CSS Enqueuer
         // Theme Main Style
+        wp_enqueue_style('otinews-bootstrap-style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', array(), '5.1.3', 'all');
         wp_enqueue_style('otinews-theme-style', get_template_directory_uri() . '/style.css', array(), $version, 'all');
 
         //JS Enqueuer
         //Theme Main JS
+        wp_enqueue_script('otinews-bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array(), '5.1.3', 'all', true);
         wp_enqueue_script('otinews-theme-script', get_template_directory_uri() . '/assets/js/main.js', array(), $version, 'all', true);
     }
 
@@ -35,14 +37,23 @@
      */
     function otinews_menu_config()
     {
+        $theme_name = wp_get_theme()->get( 'Theme Name' );
         $locations = array(
             'otinews-header-menu'       => 'Otinews Header Menu',
-            'otinews-footer-menu'       => 'Otinews Footer Menu'
+            'otinews-footer-menu'       => 'Otinews Footer Menu',
+            'otinews-navwalker-menu' => __( 'Navwalker header Menu', "$theme_name"),
         );
         register_nav_menus( $locations );
     }
 
-    add_action( 'init', 'otinews_menu_config' );
+    /**
+     * Register Custom Navigation Walker
+     */
+    function register_navwalker(){
+        require_once get_template_directory() . '/inc/navwalker/class-wp-bootstrap-navwalker.php';
+        otinews_menu_config();
+    }
+    add_action( 'after_setup_theme', 'register_navwalker' );
 
 
     /**

@@ -2,19 +2,22 @@
     get_header();
 ?>
 
-<article id="article-content" class="content">
+<div class="container">
 
-    <?php
+    <article id="article-content" class="content row py-5">
+
+        <?php
         if( have_posts() ) :
             while ( have_posts() ) :
                 the_post();
-                the_content();
+                get_template_part('template-parts/content', 'frontpage');
             endwhile;
         endif;
     ?>
 
-</article>
+    </article>
 
+</div>
 
 <?php 
     get_footer();

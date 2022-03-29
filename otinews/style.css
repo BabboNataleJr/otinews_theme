@@ -2,13 +2,32 @@
 
 Theme Name:     Oti News
 Text Domain:    otinews
-Description:    Journalistic look-alike Theme
+Description:    News-press look-alike Theme. Developed by Cesare Annese, design by Pino Barbagallo. All rights reserved by O.T.I.
 Version:        1.0.0
-Tags:           Journalistic, Press, News
-Author:         Cesare Annese
+Tags:           Press, News
+Author:         Cesare Annese, Pino Barbagallo
 Author URL:     https://github.com/BabboNataleJr
 License:        GUI General Public License v2 or later
 License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 
 
+*/
+
+/*  
+*   Questo foglio di stile viene usato
+*   come punto di ingresso per importare
+*   tutti gli altri.
+*
+*   ASSOLUTAMENTE NON SCRIVERE ISTRUZIONI DI STILE
+*
+*   Example:
+*   - @import "header.css";
+*   - @import url("header.css");
+*   
+*   To import (etc...):
+*   - import "assets/css/templates/header/header.css";
+*   - import "assets/css/templates/footer/footer.css";
+*   - import "assets/css/templates/frontpage/front-page.css";
+*   - import "assets/css/templates/contents/frontpage.css";
+*   
 */
