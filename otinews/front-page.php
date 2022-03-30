@@ -2,20 +2,20 @@
     get_header();
 ?>
 
-<div class="container">
+<div class="container-fluid border border-dark">
 
-    <article id="article-content" class="content row py-5">
+    <div id="article-content" class="content row py-5">
 
         <?php
-        if( have_posts() ) :
-            while ( have_posts() ) :
-                the_post();
-                get_template_part('template-parts/content', 'frontpage');
-            endwhile;
-        endif;
-    ?>
+            if( have_posts() ) :
+                while ( have_posts() ) :
+                    the_post();
+                    get_template_part('template-parts/contents/content', 'frontpage');
+                endwhile;
+            endif;
+        ?>
 
-    </article>
+    </div>
 
 </div>
 

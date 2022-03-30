@@ -33,21 +33,23 @@
     add_action('wp_enqueue_scripts', 'otinews_load_scripts');
     
     /**
-     * Add Menu Support
+     * Register the menu and their locations
      */
     function otinews_menu_config()
     {
-        $theme_name = wp_get_theme()->get( 'Theme Name' );
+        $theme_domain = wp_get_theme()->get( 'Text Domain' );
         $locations = array(
-            'otinews-header-menu'       => 'Otinews Header Menu',
-            'otinews-footer-menu'       => 'Otinews Footer Menu',
-            'otinews-navwalker-menu' => __( 'Navwalker header Menu', "$theme_name"),
+            'otinews-header-menu'           => __('Otinews Header Menu', "$theme_domain"),
+            'otinews-footer-menu'           => __('Otinews Footer Menu', "$theme_domain"),
+            'otinews-upper-title-menu'      => __( 'Navwalker Menu above the logo', "$theme_domain"),
+            'otinews-bottom-title-menu'     => __( 'Navwalker Menu under the logo', "$theme_domain"),
         );
         register_nav_menus( $locations );
     }
 
     /**
      * Register Custom Navigation Walker
+     * And add menu support
      */
     function register_navwalker(){
         require_once get_template_directory() . '/inc/navwalker/class-wp-bootstrap-navwalker.php';
@@ -58,7 +60,7 @@
 
     /**
      * Add Widget support
-     * Per sidebar e footer
+     * For sidebar e footer
      */
     function otinews_widget_area()
     {
