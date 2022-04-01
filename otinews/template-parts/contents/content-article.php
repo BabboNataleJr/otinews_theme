@@ -16,6 +16,12 @@
             </span>
         </div>
     </header>
+    <h1><?php _e(strtoupper(the_title()), 'otinews')?></h1>
+    <a href="<?php _e(the_permalink(), 'otinews') ?>">
+        <?php if(has_post_thumbnail()){
+            the_post_thumbnail( 'medium' );
+        }?>
+    </a>
     <?php
         the_content();
         comments_template();

@@ -2,6 +2,10 @@
     <!-- Brand's Logo -->
     <?php get_template_part('template-parts/header/brand', 'logo'); ?>
 
-    <!-- Bottom Title-->
-    <?php get_template_part('template-parts/header/menu/bottom', 'title'); ?>
+    <!-- Name of the WebSite -->
+    <?php get_template_part('template-parts/header/site', 'title'); ?>
+
+    <!-- Responsabile Director of the WebSite -->
+    <?php get_template_part('template-parts/header/director', 'name'); ?>
+
 </div>

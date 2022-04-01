@@ -25,6 +25,8 @@ License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 *   - @import url("header.css");
 *   
 *   To import (etc...):
+
+*   - import "assets/css/templates/utilities/reset.css";
 *   - import "assets/css/templates/header/header.css";
 *   - import "assets/css/templates/footer/footer.css";
 *   - import "assets/css/templates/frontpage/front-page.css";

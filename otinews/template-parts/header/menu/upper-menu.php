@@ -7,7 +7,7 @@
 
         <div class="col-md-4"></div>
         <div class="date col-md-3">
-            <?php _e(strtoupper(date('j F Y')), 'otinews');?>
+            <?php _e(strtoupper(date('j M Y')), 'otinews');?>
         </div>
         <?php
             wp_nav_menu( array(

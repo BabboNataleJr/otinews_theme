@@ -16,11 +16,14 @@
             <!-- Top Bar -->
             <?php get_template_part('template-parts/header/top', 'bar'); ?>
 
-            <!-- Navigation Menu -->
-            <?php get_template_part('template-parts/header/menu/upper', 'title'); ?>
+            <!-- Upper Menu -->
+            <?php get_template_part('template-parts/header/menu/upper', 'menu'); ?>
 
             <!-- Header del sito con il logo -->
             <?php get_template_part('template-parts/header/header', 'logo'); ?>
+
+            <!-- Bottom Menu-->
+            <?php get_template_part('template-parts/header/menu/bottom', 'menu'); ?>
 
         </div>
 
