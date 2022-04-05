@@ -1,0 +1,8 @@
+@import "front-template/left.css";
+@import "front-template/right.css";
+@import "front-template/front.css";
+
+.left__column,
+.right__column {
+    padding: 30px 0;
+}

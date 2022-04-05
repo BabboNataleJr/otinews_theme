@@ -1,0 +1,17 @@
+.front-page-content-front .front-content {
+    padding: 20px 0px 60px 0px;
+    margin: 0px 20px 0px 20px;
+    border-bottom: 1px solid black;
+}
+
+.front-content .wp-post-image {
+    width: 100%;
+    /* height: auto; */
+    object-fit: cover;
+}
+
+.front__posts {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 50px;
+}

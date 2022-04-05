@@ -33,3 +33,11 @@ License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 *   - import "assets/css/templates/contents/frontpage.css";
 *   
 */
+
+@import "assets/css/templates/frontpage/front-page.css";
+
+.wp-post-image {
+    width: 100%;
+    /* height: 500px; */
+    object-fit: cover;
+}

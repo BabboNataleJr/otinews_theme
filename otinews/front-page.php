@@ -36,7 +36,7 @@
 ?>
 
 <div class="container-fluid">
-
+    <hr>
     <div id="article-content" class="row justify-content-center">
 
         <!-- Left -->
@@ -46,6 +46,7 @@
         <?php get_template_part('template-parts/frontpage/content', 'right', $post_data['position']['right']); ?>
 
         <!-- Front -->
+        <hr>
         <?php get_template_part('template-parts/frontpage/content', 'front', $post_data['position']['front']); ?>
 
     </div>
