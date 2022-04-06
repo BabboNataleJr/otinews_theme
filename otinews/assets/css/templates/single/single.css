@@ -1,0 +1,14 @@
+@import "single-template/titlethumbnail.css";
+@import "single-template/content/header.css";
+@import "single-template/content/tags.css";
+
+.single__post__content__wrapper {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    margin-top: -170px;
+    background-color: #fff;
+}
+
+.single__content p {
+    padding: 15px 0;
+}

@@ -7,6 +7,8 @@
         add_theme_support( 'title-tag' );
         add_theme_support( 'custom-logo' );
         add_theme_support( 'post-thumbnails', array( 'post', 'page', 'service'));
+        //Add the customizer support
+        require_once get_template_directory() . '/inc/customizer/customizer.php';
     }
 
     add_action( 'after_setup_theme' , 'otinews_add_theme_support' );

@@ -35,6 +35,7 @@ License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @import "assets/css/templates/frontpage/front-page.css";
+@import "assets/css/templates/single/single.css";
 
 .wp-post-image {
     width: 100%;
