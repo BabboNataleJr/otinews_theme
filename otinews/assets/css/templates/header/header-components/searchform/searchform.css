@@ -1,0 +1,15 @@
+.search__form__content {
+    position: relative;
+}
+
+.fa-search {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.topbar__search__input {
+    text-indent: 33px;
+    height: 35px;
+    border-radius: 0;
+}

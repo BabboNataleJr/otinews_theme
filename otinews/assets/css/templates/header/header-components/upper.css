@@ -1,0 +1,5 @@
+@import 'header-components/menu/menu.css';
+
+.upper__menu__row {
+    border-bottom: 1px solid;
+}

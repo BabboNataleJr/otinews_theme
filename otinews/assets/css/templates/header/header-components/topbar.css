@@ -1,0 +1,9 @@
+@import 'searchform/searchform.css';
+
+.top__bar {
+    border-bottom: 1px solid;
+}
+
+.topbar__search__wrapper {
+    padding: 5px;
+}

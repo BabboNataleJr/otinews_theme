@@ -1,0 +1,6 @@
+@import 'header-components/topbar.css';
+@import 'header-components/upper.css';
+
+.header {
+    border-bottom: 1px solid;
+}
