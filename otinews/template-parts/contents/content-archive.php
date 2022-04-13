@@ -37,7 +37,8 @@
                     ?>
                 </div>
                 <a href="<?php the_permalink();?>"
-                    class="post-link"><?php _e('Leggi tutto →', wp_get_theme()->get( 'Text Domain' )); ?></a>
+                    class="post-link"><?php _e('Leggi tutto →', wp_get_theme()->get( 'Text Domain' )); ?>
+                </a>
             </div>
         </div>
     </div>

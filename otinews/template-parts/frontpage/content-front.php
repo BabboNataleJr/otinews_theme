@@ -1,17 +1,17 @@
     <div class="col-md-2"></div>
     <div class="col-md-6 front__posts">
         <!-- Middle Row -->
-        <?php $post_id = $args->ID?>
+        <?php $post_id = get_the_ID();?>
         <div class="front-content row">
             <div class="post__thumbnail col-md-4">
-                <a href="<?php _e(get_permalink($post_id),'otinews'); ?>">
+                <a href="<?php the_permalink(); ?>">
                     <?php if(has_post_thumbnail( $post_id )){
-                        _e(get_the_post_thumbnail( $post_id, 'thumbnail' ), 'otinews');
+                        the_post_thumbnail('thumbnail');
                     }?>
                 </a>
             </div>
             <div class="post__info col-md-8 align-self-center">
-                <h4><?php _e(get_the_title($args), 'otinews')?></h4>
+                <h4><?php the_title();?></h4>
                 <p>
                     <a href="/">
                         <?php
@@ -21,17 +21,17 @@
                         ?>
                     </a>
                     <?php 
-                        $date = substr($args->post_date, 0, 10);
+                        $date = substr(get_the_date(), 0, 10);
                         $formatted_date = date('d M Y', strtotime($date));
                         _e(strtoupper($formatted_date), 'otinews'); 
                     ?>
                 </p>
                 <p>
                     <?php
-                        _e(get_the_excerpt( $args ), 'otinews');
+                        the_excerpt();
                     ?>
                 </p>
-                <a href="<?php _e(get_permalink($args),'otinews'); ?>">
+                <a href="<?php the_permalink(); ?>">
                     <?php _e('Leggi tutto ->','otinews');?>
                 </a>
             </div>

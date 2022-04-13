@@ -2,7 +2,13 @@
 @import "front-template/right.css";
 @import "front-template/front.css";
 
+.front__page__left__right__wrapper {
+    border-bottom: 1px solid;
+}
+
 .left__column,
 .right__column {
     padding: 30px 0;
 }
+
+.pagination__row {}

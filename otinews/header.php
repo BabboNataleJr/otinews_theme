@@ -10,21 +10,18 @@
 
 <body>
 
-    <header class="">
+    <header class="header">
         <div class="container-fluid">
 
             <!-- Top Bar -->
             <?php get_template_part('template-parts/header/top', 'bar'); ?>
 
             <!-- Upper Menu -->
-            <?php get_template_part('template-parts/header/menu/upper', 'menu'); ?>
-
+            <?php get_template_part('template-parts/header/menu/upper', 'menu');?>
             <!-- Header del sito con il logo -->
             <?php get_template_part('template-parts/header/header', 'logo'); ?>
-
             <!-- Bottom Menu-->
-            <?php get_template_part('template-parts/header/menu/bottom', 'menu'); ?>
-
+            <?php get_template_part('template-parts/header/menu/bottom', 'menu');?>
         </div>
 
         <!-- <h1 class="page_title" id="page_title" align="center"><?php _e(the_title(), 'otinews')?></h1> -->

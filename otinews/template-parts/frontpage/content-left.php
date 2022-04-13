@@ -16,7 +16,7 @@
                 ?>
             </p>
             <h4 class="post__title" id="post__title">
-                <?php _e(get_the_title($args->ID), 'otinews')?>
+                <?php _e(get_the_title($args->ID), 'otinews');?>
             </h4>
             <p>
                 <?php

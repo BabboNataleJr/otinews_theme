@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row upper__menu__row">
     <nav class="navbar navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,18 +9,18 @@
         <div class="date col-md-3">
             <?php _e(strtoupper(date('j M Y')), 'otinews');?>
         </div>
-        <?php
-            wp_nav_menu( array(
-            'theme_location'            => 'otinews-upper-title-menu',
-            'depth'                     => 2, // 1 = no dropdowns, 2 = with dropdowns.
-            'container'                 => 'div',
-            'container_class'           => 'collapse navbar-collapse',
-            'container_id'              => 'navbarText',
-            'menu_class'                => 'navbar-nav text-uppercase',
-            'fallback_cb'               => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'                    => new WP_Bootstrap_Navwalker(),
-                ) 
+        <?php 
+            $args = array(
+                'theme_location'            => 'otinews-upper-title-menu',
+                'depth'                     => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                'container'                 => 'div',
+                'container_class'           => 'collapse navbar-collapse',
+                'container_id'              => 'navbarText',
+                'menu_class'                => 'navbar-nav text-uppercase',
+                'fallback_cb'               => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'                    => new WP_Bootstrap_Navwalker(),
             );
+            get_template_part('template-parts/header/menu/menu', '', $args); 
         ?>
     </nav>
 </div>

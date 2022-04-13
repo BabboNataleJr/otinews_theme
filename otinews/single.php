@@ -10,6 +10,7 @@
                 the_post();
                 get_template_part('template-parts/contents/content', 'article');
             endwhile;
+            otinews_pagination_same_category($post);
         endif;
     ?>
 
