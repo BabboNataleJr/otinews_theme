@@ -37,7 +37,7 @@
         <?php get_template_part('template-parts/frontpage/content', 'front'); ?>
 
         <div class="row pagination__row">
-            <?php pagination_bar();?>
+            <?php otinews_pagination_bar();?>
         </div>
 
     </div>

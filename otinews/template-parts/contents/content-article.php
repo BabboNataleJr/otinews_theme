@@ -1,6 +1,6 @@
 <div class="container">
     <?php get_template_part('template-parts/singlepost/title', 'thumbnail')?>
-    <div class="content row">
+    <div class="single__content row">
         <div class="col-md-2"></div>
         <div class="col-md-5 single__post__content__wrapper">
             <header class="content-header">
@@ -10,6 +10,14 @@
                 <?php
                     the_content();
                 ?>
+            </div>
+            <div class="content__article__single__social__icons">
+                <?php 
+                    dynamic_sidebar( 'social-icon-widget' )
+                ?>
+            </div>
+            <div class="single__article__pagination__links row">
+                <?php otinews_pagination_same_category($post);?>
             </div>
         </div>
         <div class="col-md-5 row">

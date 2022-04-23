@@ -3,12 +3,40 @@
 @import "front-template/front.css";
 
 .front__page__left__right__wrapper {
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
 }
 
 .left__column,
 .right__column {
-    padding: 30px 0;
+    padding: 0 10px 25px;
 }
 
-.pagination__row {}
+.front__pagination__bar {
+    padding: 20px 0;
+}
+
+.category__name {
+    background-color: rgba(255, 255, 255, .5);
+    width: fit-content;
+    padding: 5px;
+}
+
+.category__name .category__link {
+    color: #fff;
+}
+
+.category__link {
+    text-decoration: none;
+}
+
+.post__thumbnail {
+    overflow: hidden;
+}
+
+.wp-post-image {
+    transition: transform .4s;
+}
+
+.post__thumbnail:hover .wp-post-image {
+    transform: scale(1.2);
+}

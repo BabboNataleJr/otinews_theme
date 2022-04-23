@@ -4,52 +4,54 @@
     $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
     $args = array(
-        'posts_per_page'                =>   5,
         'post_type'                     =>   'post',
-        'paged'                         =>   $paged
     );
 
     $postes                             =   new WP_Query($args);
-    $post_data                          =   array();
-    $non_duplicare                      =   array();
     $i                                  =   0;
+    $post_data                          =   array();
+    $post_data['position']['left']      =   array();
+    $post_data['position']['right']     =   array();
+    $non_duplicare                      =   array();
 ?>
 
 <?php
     if($postes->have_posts()) : 
         while ($postes->have_posts()) :
             $postes->the_post();
-            $non_duplicare[]            =   $postes->posts[$i]->ID;
-            $post_data[]                =   $postes->posts[$i];
+            $post_id                    =   get_the_ID(); // or use the post id if you already have i
+            $category_object            =   get_the_category($post_id);
+            $category_name              =   strtolower($category_object[0]->name);
+            switch($category_name) :
+                case 'new': 
+                    $post_data['position']['left'][]        =   $postes->posts[$i];
+                    $non_duplicare[]                        =   $postes->posts[$i]->ID;
+                    break;
+                case 'important':
+                    $post_data['position']['right'][]       =   $postes->posts[$i];
+                    $non_duplicare[]                        =   $postes->posts[$i]->ID;
+                    break;
+            endswitch;
+            
             $i++;
         endwhile;
         wp_reset_postdata();
-        // var_dump($post_data[0]);
     endif;
 ?>
 
-<?php 
-    if(is_paged()) : 
-        get_template_part('index');
-?>
-
-<?php 
-    else :
-?>
 <div class="container-fluid">
     <div id="article-content" class="row justify-content-center">
         <div class="row justify-content-center front__page__left__right__wrapper">
             <!-- Left -->
             <?php 
-                get_template_part('template-parts/frontpage/content', 'left', $post_data[0]);
-                array_shift($post_data);
+                get_template_part('template-parts/frontpage/content', 'left', $post_data['position']['left'][0]);
             ?>
 
             <!-- Right -->
             <div class="col-md-5 right__column">
                 <div class="row g-3">
                     <?php
-                        foreach($post_data as $posted){
+                        foreach($post_data['position']['right'] as $posted){
                             get_template_part('template-parts/frontpage/content', 'right', $posted);
                         } 
                     ?>
@@ -68,7 +70,14 @@
                         if ( in_array( $post->ID, $non_duplicare ) ) continue;
                         get_template_part('template-parts/frontpage/content', 'front'); 
                     endwhile;
-                    pagination_bar();
+                ?>
+            <div class="front__pagination__links row">
+                <div class="col-md-3"></div>
+                <div class="col-md-5 text-center front__pagination__bar">
+                    <?php otinews_pagination_bar();?>
+                </div>
+            </div>
+            <?php
                 endif;
             ?>
 
@@ -78,6 +87,5 @@
 </div>
 
 <?php 
-    endif;
     get_footer();
 ?>

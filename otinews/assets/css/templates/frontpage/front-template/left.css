@@ -1,6 +1,6 @@
 .post__thumbnail__left {
     position: relative;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .post__thumbnail__left img {
@@ -12,10 +12,4 @@
     top: 70%;
     left: 35px;
     color: #fff;
-}
-
-.category__name {
-    background-color: rgba(255, 255, 255, .5);
-    width: fit-content;
-    padding: 5px;
 }

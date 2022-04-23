@@ -1,21 +1,21 @@
-.front-page-content-front {
+.front__page__front__post__from__blog {
     padding: 25px 0;
 }
 
-.front-page-content-front .front-content {
-    padding: 60px 20px 80px;
+.front__page__front__post__from__blog .front-content {
+    padding: 10px 30px 60px;
     /* margin: 0px 20px 0px 20px; */
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
 }
 
 .front-content .wp-post-image {
     width: 100%;
-    /* height: auto; */
+    height: auto;
     object-fit: cover;
 }
 
 .front__posts {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    padding: 25px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 40px;
 }

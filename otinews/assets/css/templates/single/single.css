@@ -3,12 +3,52 @@
 @import "single-template/content/tags.css";
 
 .single__post__content__wrapper {
-    border-right: 1px solid;
-    border-left: 1px solid;
+    border-right: 2px solid;
+    border-left: 2px solid;
     margin-top: -170px;
     background-color: #fff;
+    padding: 0 25px 25px;
 }
 
 .single__content p {
     padding: 15px 0;
+}
+
+/* Da spostare nel suo file css */
+.single__content {
+    margin-bottom: 25px;
+}
+
+.single__prev__post,
+.single__next__post {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding: 25px 15px;
+}
+
+.single__prev__post a,
+.single__next__post a {
+    text-decoration: none;
+    color: gray;
+}
+
+.single__prev__post a:hover,
+.single__next__post a:hover {
+    color: rgb(82, 82, 82);
+}
+
+.single__next__post {
+    border-left: 1px solid;
+}
+
+.single__prev__post {
+    border-right: 1px solid;
+}
+
+.content__article__single__social__icons {
+    padding: 15px 0;
+}
+
+.post__thumbnail__single .wp-post-image {
+    height: 300px;
 }

@@ -23,7 +23,7 @@
     <div class="post__thumbnail__single">
         <a href="<?php _e(the_permalink(), 'otinews'); ?>">
             <?php if(has_post_thumbnail( get_the_ID() )){
-                _e(the_post_thumbnail('thumbnail'), 'otinews');
+                the_post_thumbnail('large');
             }?>
         </a>
     </div>

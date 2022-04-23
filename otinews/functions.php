@@ -7,11 +7,17 @@
         add_theme_support( 'title-tag' );
         add_theme_support( 'custom-logo' );
         add_theme_support( 'post-thumbnails', array( 'post', 'page', 'service'));
+        add_theme_support( 'custom-header' );
         //Add the customizer support
         require_once get_template_directory() . '/inc/customizer/customizer.php';
     }
 
     add_action( 'after_setup_theme' , 'otinews_add_theme_support' );
+
+    function mytheme_custom_excerpt_length( $length ) {
+        return 20;
+    }
+    add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 
 
     /**
@@ -54,11 +60,11 @@
      * Register Custom Navigation Walker
      * And add menu support
      */
-    function register_navwalker(){
+    function otinews_register_navwalker(){
         require_once get_template_directory() . '/inc/navwalker/class-wp-bootstrap-navwalker.php';
         otinews_menu_config();
     }
-    add_action( 'after_setup_theme', 'register_navwalker' );
+    add_action( 'after_setup_theme', 'otinews_register_navwalker' );
 
 
     /**
@@ -92,7 +98,7 @@
     add_action('widgets_init', 'otinews_widget_area');
 
 
-    function pagination_bar() {
+    function otinews_pagination_bar() {
         global $wp_query;
     
         $total_pages = $wp_query->max_num_pages;
@@ -129,15 +135,57 @@
         $thisindex = array_search( $post_id, $ids );
         $previd    = isset( $ids[ $thisindex - 1 ] ) ? $ids[ $thisindex - 1 ] : false;
         $nextid    = isset( $ids[ $thisindex + 1 ] ) ? $ids[ $thisindex + 1 ] : false;
+        ?>
 
-        if (false !== $previd ) {
-            ?><a rel="prev" href="<?php echo get_permalink($previd) ?>">
-    Post Precedente: <?php _e(get_the_title($previd), 'otinews');?>
-</a><?php
-        }
-        if (false !== $nextid ) {
-            ?><a rel="next" href="<?php echo get_permalink($nextid) ?>">
-    Post Successivo: <?php _e(get_the_title($nextid),'otinews');?>
-</a><?php
-        }
+<div class="col-md-6 single__prev__post text-center">
+    <?php if (false !== $previd ) { ?>
+    <a class="single__pagination__link" rel="prev" href="<?php echo get_permalink($previd) ?>">
+        < <?php _e(get_the_title($previd), 'otinews');?> </a>
+            <?php } ?>
+</div>
+<div class="col-md-6 single__next__post text-center">
+    <?php if (false !== $nextid ) { ?>
+    <a rel="next" href="<?php echo get_permalink($nextid) ?>">
+        <?php _e(get_the_title($nextid),'otinews');?> >
+    </a>
+    <?php } ?>
+</div>
+<?php
     }
+
+
+
+    function otinews_add_file_types_to_uploads($file_types){
+        $new_filetypes = array();
+        $new_filetypes['svg'] = 'image/svg+xml';
+        $file_types = array_merge($file_types, $new_filetypes );
+        return $file_types;
+    }
+    
+    add_filter('upload_mimes', 'otinews_add_file_types_to_uploads');
+
+    function otinews_custom_header_setup() {
+        $defaults = array(
+            // Default Header Image to display
+            'default-image'         => get_template_directory_uri() . '/assets/images/header/inNEWS.jpg',
+            // Display the header text along with the image
+            'header-text'           => false,
+            // Header text color default
+            'default-text-color'        => '000',
+            // Header image width (in pixels)
+            'width'             => 1000,
+            // Header image height (in pixels)
+            'height'            => 198,
+            // Header image random rotation default
+            'random-default'        => false,
+            // Enable upload of image file in admin 
+            'uploads'       => false,
+            // function to be called in theme head section
+            'wp-head-callback'      => 'wphead_cb',
+            //  function to be called in preview page head section
+            'admin-head-callback'       => 'adminhead_cb',
+            // function to produce preview markup in the admin screen
+            'admin-preview-callback'    => 'adminpreview_cb',
+            );
+    }
+    add_action( 'after_setup_theme', 'otinews_custom_header_setup' );
