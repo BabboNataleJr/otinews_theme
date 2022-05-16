@@ -1,7 +1,7 @@
 <?php 
     get_header();
 
-    $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
+    $paged                              = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
     $args = array(
         'post_type'                     =>   'post',
@@ -61,7 +61,7 @@
 
         </div>
 
-
+        <!-- Front -->
         <div class="row front__page__front__post__from__blog">
             <?php 
                 if( have_posts() ) :
@@ -72,8 +72,8 @@
                     endwhile;
                 ?>
             <div class="front__pagination__links row">
-                <div class="col-md-3"></div>
-                <div class="col-md-5 text-center front__pagination__bar">
+                <div class="col-md-2"></div>
+                <div class="col-md-6 text-center front__pagination__bar">
                     <?php otinews_pagination_bar();?>
                 </div>
             </div>

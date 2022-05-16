@@ -1,0 +1,21 @@
+.tags__title {
+    @include font-family-din-pro-light {
+        @extend %title-30;
+        color: $color-verde-tre;
+    }
+
+    margin-top: 25px;
+    display: inline-block;
+    border-bottom: 2px solid;
+    width: 45%;
+}
+
+.tags__cloud__tags {
+    list-style-type: none;
+}
+
+.tags__tag__item__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}

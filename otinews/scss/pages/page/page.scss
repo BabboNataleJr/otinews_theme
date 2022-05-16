@@ -1,0 +1,62 @@
+@import './template__page/ultimi__articoli';
+
+.page__container {
+
+    @for $i from 1 to 8 {
+        h#{$i} {
+            @include font-family-din-pro-bold {
+                @if $i ==1 {
+                    @extend %title-44;
+                }
+
+                @else {
+                    @extend %title-24;
+                }
+            }
+
+            color: $color-verde-tre;
+            padding: 20px 0;
+
+            strong {
+                color: inherit;
+                padding: inherit;
+            }
+        }
+
+    }
+
+    p {
+        @extend %description-18;
+        padding: 10px 0;
+    }
+
+    ul {
+        @extend %description-18;
+        list-style-type: disc;
+        padding: 10px 40px;
+
+        li {
+            padding: 2.5px 0;
+        }
+    }
+
+    .page__wrapper {
+        border-left: 2px solid;
+        border-right: 2px solid;
+        margin: 15px 0;
+    }
+
+    .thumbnail__template__page__wrapper {
+        .page__content {
+            @extend .page__wrapper;
+            padding: 20px;
+        }
+
+        .page__post__thumbnail__wrapper {
+            margin: 20px 20px 20px -150px;
+            height: 400px;
+            // background-size: cover;
+        }
+    }
+
+}

@@ -1,0 +1,45 @@
+@font-face {
+    font-family: $font-din-pro;
+    src: url('../assets/fonts/dinpro.woff2') format('woff2'),
+        url('../assets/fonts/dinpro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: $font-din-pro-bold;
+    src: url('../assets/fonts/dinproBold.woff2') format('woff2'),
+        url('../assets/fonts/dinproBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-din-pro-medium;
+    src: url('../assets/fonts/dinproMedium.woff2') format('woff2'),
+        url('../assets/fonts/dinproMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-din-pro-condensed;
+    src: url('../assets/fonts/dinproCond.woff2') format('woff2'),
+        url('../assets/fonts/dinproCond.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-din-pro-light;
+    src: url('../assets/fonts/dinproLight.woff2') format('woff2'),
+        url('../assets/fonts/dinproLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

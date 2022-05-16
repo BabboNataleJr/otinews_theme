@@ -1,0 +1,33 @@
+.page__ultimi__articoli__super__title {
+    background-color: $color-nero;
+
+    .ultimi__articoli__super__title {
+        @include font-family-din-pro-light {
+            @extend %title-14;
+        }
+
+        text-transform: uppercase;
+        color: $color-bianco;
+        padding: 5px 5px;
+        margin: 25px 0;
+    }
+}
+
+.page__ultimi__articoli {
+    margin-bottom: 30px;
+
+    &__permalink {
+        text-decoration: none;
+
+        .page__ultimi__articoli__meta__info {
+            .page__ultimi__articoli__title {
+                padding: 10px 0;
+            }
+
+            .page__ultimi__articoli__excerpt {
+                padding: 5px 0;
+            }
+        }
+    }
+
+}

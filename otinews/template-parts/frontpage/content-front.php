@@ -1,5 +1,5 @@
-    <div class="col-md-3"></div>
-    <div class="col-md-5 front__posts">
+    <div class="col-md-2"></div>
+    <div class="col-md-6 front__posts">
         <!-- Middle Row -->
         <?php 
             $post_id = get_the_ID();
@@ -9,35 +9,39 @@
             $category_link = get_category_link( $category_id );
         ?>
         <div class="front-content row">
-            <div class=" post__thumbnail post__thumbnail col-md-4">
+            <div class="post__thumbnail__front col-md-5">
                 <a href="<?php the_permalink(); ?>">
                     <?php if(has_post_thumbnail( $post_id )){
                         the_post_thumbnail('thumbnail');
                     }?>
                 </a>
             </div>
-            <div class="post__info col-md-8 align-self-center">
-                <h4><?php the_title();?></h4>
-                <p class="category__name__front">
+            <div class="post__info col-md-7 align-self-center">
+                <h4 class="content__front__post__title"><?php the_title();?></h4>
+                <div class="content__front__metadata">
                     <a href="<?php _e($category_link);?>" class="category__link">
                         <?php
                             _e(strtoupper($category_name),'otinews');
                         ?>
                     </a>
-                    <?php 
-                        $date = substr(get_the_date(), 0, 10);
-                        $formatted_date = date('d M Y', strtotime($date));
-                        _e(strtoupper($formatted_date), 'otinews'); 
-                    ?>
-                </p>
-                <p>
+                    <span class="content__date">
+                        <?php 
+                            $date = substr(get_the_date(), 0, 10);
+                            $formatted_date = date('d M Y', strtotime($date));
+                            _e(strtoupper($formatted_date), 'otinews'); 
+                        ?>
+                    </span>
+                </div>
+                <div class="content__front__excerpt">
                     <?php
                         the_excerpt();
                     ?>
-                </p>
-                <a href=" <?php the_permalink(); ?>">
-                    <?php _e('Leggi tutto ->','otinews');?>
-                </a>
+                </div>
+                <div class="content__front__permalink__wrapper">
+                    <a href=" <?php the_permalink(); ?>" class="content__front__permalink">
+                        <?php _e('Leggi tutto ->','otinews');?>
+                    </a>
+                </div>
             </div>
 
         </div>

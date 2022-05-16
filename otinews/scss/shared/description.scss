@@ -1,0 +1,7 @@
+$sizes: 14, 16, 18, 21, 24, 30;
+
+@each $size in $sizes {
+    %description-#{$size} {
+        font-size: rem($size);
+    }
+}

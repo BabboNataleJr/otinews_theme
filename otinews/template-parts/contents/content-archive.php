@@ -1,45 +1,52 @@
-<div class="container">
-    <div class="post">
-        <div class="media">
-            <img src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="" class="post-media">
-            <div class="post-body">
-                <h3 class="post-title">
-                    <a href="<?php the_permalink();?>">
+    <div class="col-md-2"></div>
+    <div class="col-md-6 front__posts">
+        <!-- Middle Row -->
+        <?php 
+            $post_id = get_the_ID();
+            $category_object = get_the_category( $post_id );
+            $category_name = $category_object[0]->name;
+            $category_id = get_cat_ID( "$category_name" );
+            $category_link = get_category_link( $category_id );
+        ?>
+        <div class="front-content row">
+            <div class="post__thumbnail col-md-5">
+                <a href="<?php the_permalink(); ?>">
+                    <?php if(has_post_thumbnail( $post_id )){
+                        the_post_thumbnail('thumbnail');
+                    }?>
+                </a>
+            </div>
+            <div class="post__info col-md-7 align-self-center">
+                <h4 class="content__front__post__title"><?php the_title();?></h4>
+                <div class="content__front__metadata">
+                    <a href="<?php _e($category_link);?>" class="category__link">
                         <?php
-                            the_title();
+                            _e(strtoupper($category_name),'otinews');
                         ?>
                     </a>
-                </h3>
-                <div class="post-metadata">
-                    <span class="meta-post-date">
-                        <?php
-                            the_date();
-                        ?>
-                    </span>
-                    <span class="meta-post-reading-time">
-                        <?php
-                            /**
-                             * Inserire un plugin che calcola il
-                             * tempo di lettura
-                             * O eliminare questo span
-                             */
-                        ?>
-                    </span>
-                    <span class="meta-post-comments">
-                        <?php
-                            comments_number();
+                    <span class="content__date">
+                        <?php 
+                            $date = substr(get_the_date(), 0, 10);
+                            $formatted_date = date('d M Y', strtotime($date));
+                            _e(strtoupper($formatted_date), 'otinews'); 
                         ?>
                     </span>
                 </div>
-                <div class="intro">
+                <div class="content__front__excerpt">
                     <?php
                         the_excerpt();
                     ?>
                 </div>
-                <a href="<?php the_permalink();?>"
-                    class="post-link"><?php _e('Leggi tutto →', wp_get_theme()->get( 'Text Domain' )); ?>
-                </a>
+                <div class="content__front__permalink__wrapper">
+                    <a href=" <?php the_permalink(); ?>" class="content__front__permalink">
+                        <?php _e('Leggi tutto ->','otinews');?>
+                    </a>
+                </div>
             </div>
+
         </div>
+        <!-- End Middle Row -->
     </div>
-</div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2 front__pubblicita"></div>
+    <div class="col-md-1"></div>

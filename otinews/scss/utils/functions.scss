@@ -1,0 +1,22 @@
+@use 'sass:math';
+
+@function z($name) {
+    @if index($z-indexes, $name) {
+        @return(length($z-indexes) - index($z-indexes, $name))+1;
+    }
+
+    @else {
+        @warn 'There is no item "#{$name}" in this list; Choose one of: #{$z-indexes}';
+
+        @return null;
+    }
+}
+
+$base-font-size: 16;
+
+/*
+* $base-font-size: 16px; di per standar.
+*/
+@function rem($px, $base: $base-font-size) {
+    @return math.div($px, $base) * 1rem;
+}

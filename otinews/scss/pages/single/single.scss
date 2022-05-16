@@ -1,0 +1,75 @@
+@import "./single-template/titlethumbnail";
+@import "./single-template/content/header";
+@import "./single-template/content/tags";
+
+.single__post__content__wrapper {
+    border-right: 2px solid;
+    border-left: 2px solid;
+    margin-top: -80px;
+    background-color: $color-bianco;
+    padding: 0 25px 25px;
+}
+
+.single__content p {
+    @extend %description-21;
+    line-height: 24px;
+    padding: 15px 0;
+    margin-bottom: 0;
+}
+
+/* Da spostare nel proprio foglio di stile (da creare) */
+.single__content {
+    margin-bottom: 25px;
+}
+
+.single__prev__post,
+.single__next__post {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding: 25px 15px;
+    position: relative;
+
+    a {
+        text-decoration: none;
+        color: gray;
+
+        &:hover {
+            color: rgb(82, 82, 82);
+        }
+    }
+}
+
+.link__next::after {
+    content: ">";
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0;
+    font-size: 35px;
+}
+
+.link__prev::after {
+    content: "<";
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    font-size: 35px;
+}
+
+
+.single__next__post {
+    border-left: 1px solid;
+}
+
+.single__prev__post {
+    border-right: 1px solid;
+}
+
+.content__article__single__social__icons {
+    padding: 15px 0;
+}
+
+.post__thumbnail__single .wp-post-image {
+    height: 300px;
+}

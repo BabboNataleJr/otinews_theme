@@ -1,0 +1,12 @@
+@import 'menu/menu';
+
+.upper__menu__row {
+    border-bottom: 2px solid;
+}
+
+.upper__date {
+    @include font-family-din-pro-bold {
+        @extend %description-14;
+        color: $color-verde-due;
+    }
+}

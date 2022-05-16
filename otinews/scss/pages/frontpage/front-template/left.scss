@@ -1,0 +1,21 @@
+.post__title__left {
+    @include font-family-din-pro-bold {
+        @extend %title-24;
+    }
+}
+
+.post__thumbnail__left {
+    position: relative;
+
+    /* padding: 0 20px; */
+    img {
+        height: 500px;
+    }
+
+    .post__info {
+        position: absolute;
+        top: 70%;
+        left: 15px;
+        color: $color-bianco;
+    }
+}

@@ -6,7 +6,7 @@
         </button>
 
         <div class="col-md-4"></div>
-        <div class="date col-md-3">
+        <div class="upper__date col-md-3">
             <?php _e(strtoupper(date('j M Y')), 'otinews');?>
         </div>
         <?php 
@@ -14,9 +14,9 @@
                 'theme_location'            => 'otinews-upper-title-menu',
                 'depth'                     => 2, // 1 = no dropdowns, 2 = with dropdowns.
                 'container'                 => 'div',
-                'container_class'           => 'collapse navbar-collapse',
+                'container_class'           => 'collapse navbar-collapse menu__wrapper',
                 'container_id'              => 'navbarText',
-                'menu_class'                => 'navbar-nav text-uppercase',
+                'menu_class'                => 'navbar-nav text-uppercase upper__menu',
                 'fallback_cb'               => 'WP_Bootstrap_Navwalker::fallback',
                 'walker'                    => new WP_Bootstrap_Navwalker(),
             );

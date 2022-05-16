@@ -1,0 +1,16 @@
+.footer__menu {
+    border-bottom: 2px solid $color-verde-quattro;
+    color: $color-verde-quattro;
+    align-items: end;
+}
+
+.footer__menu .nav-link {
+    @include font-family-din-pro-medium {
+        @extend %description-18;
+        color: $color-verde-quattro;
+    }
+}
+
+.footer__menu .nav-link:hover {
+    color: $color-verde-due;
+}

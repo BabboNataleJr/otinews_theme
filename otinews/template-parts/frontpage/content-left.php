@@ -21,16 +21,16 @@
                     ?>
                 </a>
             </p>
-            <h4 class="post__title" id="post__title">
+            <h4 class="post__title post__title__left" id="post__title">
                 <?php _e(get_the_title($args->ID), 'otinews');?>
             </h4>
-            <p>
+            <span class="content__date content__date__left">
                 <?php
                     $date = substr($args->post_date, 0, 10);
                     $formatted_date = date('d M Y', strtotime($date));
                     _e(strtoupper($formatted_date), 'otinews'); 
                 ?>
-            </p>
+            </span>
 
         </div>
     </div>

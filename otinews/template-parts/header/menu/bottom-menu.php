@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-4"></div>
-    <div class="navbar navbar-expand-lg col">
+    <div class="navbar navbar-expand-lg col bottom__menu__wrapper menu__wrapper">
         <?php 
             $args = array(
             'theme_location'    => 'otinews-bottom-title-menu',
@@ -8,7 +8,7 @@
             'container'         => '',
             'container_class'   => '',
             'container_id'      => '',
-            'menu_class'        => 'navbar-nav text-uppercase',
+            'menu_class'        => 'navbar-nav text-uppercase bottom__menu',
             'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
             'walker'            => new WP_Bootstrap_Navwalker(),
             );

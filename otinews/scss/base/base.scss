@@ -1,0 +1,53 @@
+// Make type normal across browsers
+*,
+html,
+body {
+    font-size: $base-font-size + px;
+    font-family: $font-din-pro, sans-serif;
+    color: $base-paragraph-color;
+    line-height: $base-paragraph-line-height;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*              *\
+    # WP Images
+\*              */
+.wp-post-image {
+    width: 100%;
+    /* height: 500px; */
+    object-fit: cover;
+    transition: .3s all ease-out;
+}
+
+//Article
+#article-content {
+    margin-top: 25px;
+}
+
+/*                      *\
+    # Text variation
+\*                      */
+
+strong,
+b,
+blockquote,
+q {
+    font-weight: bold;
+}
+
+blockquote,
+q {
+    color: $color-verde-tre;
+    font-style: italic;
+
+    p {
+        color: inherit;
+    }
+}
+
+/*              *\
+    # Lists
+\*              */

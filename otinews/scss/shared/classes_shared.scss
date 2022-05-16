@@ -1,0 +1,36 @@
+.content__date {
+    @include font-family-din-pro {
+        @extend %description-14;
+        color: $color-bianco;
+    }
+}
+
+.post__title {
+    color: $color-bianco;
+}
+
+.social__link {
+    @include font-family-din-pro-medium {
+        @extend %description-18;
+    }
+
+    text-decoration: none;
+    color: $color-grigio-due;
+    padding: 0 5px;
+
+    &:hover {
+        i {
+            color: $color-verde-due;
+        }
+    }
+}
+
+.menu__wrapper {
+    ul {
+        li {
+            a:hover {
+                color: $color-verde-due;
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@
     add_action( 'after_setup_theme' , 'otinews_add_theme_support' );
 
     function mytheme_custom_excerpt_length( $length ) {
-        return 20;
+        return 50;
     }
     add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 
@@ -36,7 +36,7 @@
         //JS Enqueuer
         //Theme Main JS
         wp_enqueue_script('otinews-bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array(), '5.1.3', 'all', true);
-        wp_enqueue_script('otinews-theme-script', get_template_directory_uri() . '/assets/js/main.js', array(), $version, 'all', true);
+        wp_enqueue_script('otinews-theme-script', get_template_directory_uri() . '/main.js', array(), $version, 'all', true);
     }
 
     add_action('wp_enqueue_scripts', 'otinews_load_scripts');
@@ -138,15 +138,15 @@
         ?>
 
 <div class="col-md-6 single__prev__post text-center">
-    <?php if (false !== $previd ) { ?>
-    <a class="single__pagination__link" rel="prev" href="<?php echo get_permalink($previd) ?>">
-        < <?php _e(get_the_title($previd), 'otinews');?> </a>
-            <?php } ?>
+    <?php if ($previd ) { ?>
+    <a class="single__pagination__link link__prev" rel="prev" href="<?php echo get_permalink($previd) ?>">
+        <?php _e(get_the_title($previd), 'otinews');?> </a>
+    <?php } ?>
 </div>
 <div class="col-md-6 single__next__post text-center">
-    <?php if (false !== $nextid ) { ?>
-    <a rel="next" href="<?php echo get_permalink($nextid) ?>">
-        <?php _e(get_the_title($nextid),'otinews');?> >
+    <?php if ($nextid ) { ?>
+    <a class="single__pagination__link link__next" rel="next" href="<?php echo get_permalink($nextid) ?>">
+        <?php _e(get_the_title($nextid),'otinews');?>
     </a>
     <?php } ?>
 </div>
@@ -189,3 +189,13 @@
             );
     }
     add_action( 'after_setup_theme', 'otinews_custom_header_setup' );
+
+
+    function otinews_custom_trim($limit, $getThe, $markup) {
+        $dictionary = array(
+            'content'           => get_the_content(),
+            'excerpt'           => get_the_excerpt(),
+            'title'             => get_the_title()
+        );
+        return wp_trim_words($dictionary[$getThe], $limit, $markup);
+    }

@@ -1,0 +1,24 @@
+@import './header-components/topbar';
+@import './header-components/upper';
+
+.header {
+    border-bottom: 2px solid;
+}
+
+.site__title__director__name {
+    @include font-family-din-pro-medium {
+        @extend %description-14;
+        color: $color-verde-due;
+    }
+
+    #navbar-brand-name {
+        @include font-family-din-pro-bold {
+            @extend %description-14;
+            color: $color-verde-due;
+        }
+    }
+}
+
+.bottom__menu__wrapper {
+    padding: 0;
+}

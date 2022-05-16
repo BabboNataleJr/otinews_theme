@@ -1,0 +1,24 @@
+@mixin font-family-din-pro {
+    font-family: $font-din-pro, sans-serif;
+    @content;
+}
+
+@mixin font-family-din-pro-bold {
+    font-family: $font-din-pro-bold, sans-serif;
+    @content;
+}
+
+@mixin font-family-din-pro-condensed {
+    font-family: $font-din-pro-condensed, sans-serif;
+    @content;
+}
+
+@mixin font-family-din-pro-light {
+    font-family: $font-din-pro-light, sans-serif;
+    @content;
+}
+
+@mixin font-family-din-pro-medium {
+    font-family: $font-din-pro-medium, sans-serif;
+    @content;
+}

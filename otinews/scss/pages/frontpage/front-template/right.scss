@@ -1,0 +1,26 @@
+.post__thumbnail__right {
+    position: relative;
+    /* padding: 15px; */
+}
+
+.post__thumbnail__right .post__info {
+    position: absolute;
+    top: 65%;
+    left: 10px;
+    color: $color-bianco;
+}
+
+.post__thumbnail__media__images__right {
+    height: 240px;
+}
+
+.category__name__right {
+    margin-bottom: .5rem;
+    font-size: .7rem;
+}
+
+.post__title__right {
+    @include font-family-din-pro-medium {
+        @extend %title-14;
+    }
+}

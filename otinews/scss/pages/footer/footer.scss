@@ -1,0 +1,34 @@
+@import './footer-parts/footer-menu';
+
+.footer__section {
+    padding: 15px;
+    background-color: $color-nero;
+}
+
+.footer__widget {
+
+    p {
+        padding: 5px 0;
+        color: $color-verde-quattro;
+        @extend %description-18;
+    }
+}
+
+.footer__social__icon {
+    text-align: end;
+    align-self: flex-end;
+}
+
+.footer__social__icon {
+    .social__link {
+        i {
+            color: $color-verde-quattro;
+        }
+
+        &:hover {
+            i {
+                color: $color-verde-due;
+            }
+        }
+    }
+}

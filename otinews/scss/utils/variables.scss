@@ -1,0 +1,48 @@
+/*                  *\
+    # Colors
+\*                  */
+$color-verde-uno: #DDDC00;
+$color-verde-due: #008D39;
+$color-verde-tre: #83B727;
+$color-verde-quattro: #7C989C;
+
+$color-arancio: #F39300;
+
+$color-grigio-uno: #F7F7F9;
+$color-grigio-due: #B1B0B2;
+
+$color-nero: #2B2521;
+$color-bianco: #fff;
+
+/*                  *\
+    # Typography
+\*                  */
+
+//Font-family
+$font-din-pro: 'DIN Pro';
+$font-din-pro-regular: 'DIN Pro regular';
+$font-din-pro-bold: 'DIN Pro bold';
+$font-din-pro-condensed: 'DIN Pro condensed';
+$font-din-pro-light: 'DIN Pro Light';
+$font-din-pro-medium: 'DIN Pro medium';
+
+
+/*                      *\
+    # Basic style info
+\*                      */
+
+$base-paragraph-color : $color-nero;
+$base-paragraph-line-height: 1.5em;
+$base-paragraph-margin: 10px;
+
+/*                                  *\
+    # Z-Index per function.scss
+\*                                  */
+$z-indexes: (
+    'preloader',
+    'navigation',
+    'content'
+);
+
+
+$ease-out: cubic-bezier(0.19, 1, 0.22, 1);
