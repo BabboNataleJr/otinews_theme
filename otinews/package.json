@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx webpack"
+    "dev": "npx webpack",
+    "sass-info": "sass --help",
+    "sass-compile": "sass --style=compressed scss/index.scss:style_2.css"
   },
   "keywords": [],
   "author": "",

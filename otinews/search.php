@@ -11,14 +11,16 @@
                     get_template_part('template-parts/contents/content', 'archive');
                 endwhile;
                 if($_GET['s'] != "") : ?>
-                    <div class="search__pagination__links row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-6 text-center search__pagination__bar">
-                            <?php otinews_pagination_bar();?>
-                        </div>
-                    </div>
-                <?php
+        <div class="search__pagination__links row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6 text-center search__pagination__bar">
+                <?php otinews_pagination_bar();?>
+            </div>
+        </div>
+        <?php
                 endif;
+            else : 
+                get_template_part('./404');
             endif;
         ?>
 

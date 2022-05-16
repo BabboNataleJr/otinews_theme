@@ -8,7 +8,7 @@ const dirStyles = path.join(__dirname, "./scss");
 
 module.exports = {
     mode: 'production',
-    devtool: 'source-map',
+    // devtool: 'source-map',
     entry: [
         path.join(dirStyles, './index.scss'),
     ],
