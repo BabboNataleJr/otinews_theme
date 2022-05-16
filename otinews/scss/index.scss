@@ -20,3 +20,9 @@
 @import './pages/footer/footer';
 
 @import './mobile/mobile';
+
+.class__to__test {
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+}
