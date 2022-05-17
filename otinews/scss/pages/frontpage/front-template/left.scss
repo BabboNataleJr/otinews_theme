@@ -1,6 +1,7 @@
 .post__title__left {
     @include font-family-din-pro-bold {
         @extend %title-24;
+        padding: 5px 0;
     }
 }
 

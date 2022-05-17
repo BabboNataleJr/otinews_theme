@@ -1,5 +1,5 @@
-<div class="col-md-1"></div>
-<div class="col-md-5 left__column">
+<div class="col-md-1 left__first__space"></div>
+<div class="col-md-6 col-lg-5 left__column">
     <?php 
         $category_object = get_the_category( $args->ID );
         $category_name = $category_object[0]->name;

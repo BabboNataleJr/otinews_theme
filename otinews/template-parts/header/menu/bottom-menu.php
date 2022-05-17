@@ -1,5 +1,5 @@
-<div class="row">
-    <div class="col-md-4"></div>
+<div class="row container-fluid">
+    <div class="col-md-0 col-lg-4"></div>
     <div class="navbar navbar-expand-lg col bottom__menu__wrapper menu__wrapper">
         <?php 
             $args = array(

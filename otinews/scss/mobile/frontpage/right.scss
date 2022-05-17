@@ -1,0 +1,14 @@
+@include media(xl) {
+    .post__thumbnail__right {
+        .post__info {
+            top: 60%;
+            left: 10px;
+        }
+    }
+}
+
+@include media(lg) {
+    .right__last__space {
+        display: none;
+    }
+}

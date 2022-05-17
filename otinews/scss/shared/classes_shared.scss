@@ -34,3 +34,43 @@
         }
     }
 }
+
+.upper__menu__row {
+    .navbar-toggler {
+        border: 1px solid $color-grigio-due;
+
+        .navbar-toggler-icon {
+            .line {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    // display: block;
+                    width: 90%;
+                    height: 3px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    // transform: rotate(90deg);
+                    transform-origin: center;
+                    background-color: $color-grigio-due;
+                }
+            }
+
+            $progressione: (
+                uno: 16,
+                due: 32,
+                tre: 36
+            );
+        $top: 0%;
+
+        @each $prog_name,
+        $prog_value in $progressione {
+            .line__#{$prog_name} {
+                $top: $top +$prog_value;
+                top: $top;
+            }
+        }
+    }
+}
+}

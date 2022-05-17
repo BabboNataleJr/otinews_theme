@@ -48,7 +48,7 @@
             ?>
 
             <!-- Right -->
-            <div class="col-md-5 right__column">
+            <div class="col-md-6 col-lg-5 right__column">
                 <div class="row g-3">
                     <?php
                         foreach($post_data['position']['right'] as $posted){
@@ -57,7 +57,7 @@
                     ?>
                 </div>
             </div>
-            <div class="col-md-1"></div>
+            <div class="col-md-1 right__last__space"></div>
 
         </div>
 

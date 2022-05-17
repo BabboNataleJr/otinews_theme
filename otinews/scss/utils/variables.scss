@@ -44,5 +44,14 @@ $z-indexes: (
     'content'
 );
 
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
 
 $ease-out: cubic-bezier(0.19, 1, 0.22, 1);

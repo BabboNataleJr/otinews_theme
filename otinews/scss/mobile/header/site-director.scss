@@ -1,0 +1,13 @@
+@include media(md) {
+    .header__logo__row {
+        padding: 10px;
+
+        .site__title__director__name {
+            font-size: 12px;
+
+            #navbar-brand-name {
+                font-size: 12px;
+            }
+        }
+    }
+}

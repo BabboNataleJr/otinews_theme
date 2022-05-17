@@ -1,0 +1,10 @@
+@include media(lg) {
+    .bottom__menu {
+        flex-flow: row wrap;
+        gap: 10px;
+
+        a {
+            font-size: 12px;
+        }
+    }
+}

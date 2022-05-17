@@ -1,5 +1,5 @@
-    <div class="col-md-2"></div>
-    <div class="col-md-6 front__posts">
+    <div class="col-0 col-md-1 col-lg-2"></div>
+    <div class="col-lg-6 col-md-8 col-12 front__posts">
         <!-- Middle Row -->
         <?php 
             $post_id = get_the_ID();
@@ -47,6 +47,6 @@
         </div>
         <!-- End Middle Row -->
     </div>
-    <div class="col-md-1"></div>
+    <!-- <div class="col-md-0 col-lg-1 col-0"></div> -->
     <div class="col-md-2 front__pubblicita"></div>
     <div class="col-md-1"></div>

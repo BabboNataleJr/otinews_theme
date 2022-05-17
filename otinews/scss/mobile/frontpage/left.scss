@@ -1,0 +1,36 @@
+@include media(xl) {
+    .post__title__left {
+        font-size: 120%;
+        line-height: 1;
+    }
+
+    .post__thumbnail__left {
+        .post__info {
+            // top: 70%;
+            left: 10px;
+        }
+    }
+}
+
+@include media(lg) {
+    .left__first__space {
+        display: none;
+    }
+}
+
+@include media(sm) {
+    .post__title__left {
+        font-size: 100%;
+        line-height: 1.2;
+        padding: 5px 0;
+    }
+
+    .post__thumbnail__left {
+        .post__info {
+            // top: 70%;
+            left: 5px;
+        }
+    }
+
+
+}

@@ -1,0 +1,9 @@
+@include media(sm) {
+    .front__posts {
+        padding: 40px 0 0 0;
+
+        .content__front__post__title {
+            padding-top: 20px;
+        }
+    }
+}
