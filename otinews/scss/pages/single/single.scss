@@ -31,11 +31,19 @@
 
     a {
         text-decoration: none;
-        color: gray;
+        color: $color-grigio-due;
+    }
 
-        &:hover {
-            color: rgb(82, 82, 82);
+    &:hover {
+        a {
+            color: $color-arancio;
         }
+    }
+
+    @include media(lg) {
+        border-left: 2px solid;
+        border-right: 2px solid;
+        margin: 5px 0;
     }
 }
 

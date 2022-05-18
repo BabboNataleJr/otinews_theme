@@ -35,42 +35,96 @@
     }
 }
 
+// .upper__menu__row {
+//     .navbar-toggler {
+//         border: 1px solid $color-grigio-due;
+
+//         .navbar-toggler-icon {
+//             .line {
+//                 position: relative;
+
+//                 &::after {
+//                     content: "";
+//                     position: absolute;
+//                     // display: block;
+//                     width: 90%;
+//                     height: 3px;
+//                     left: 50%;
+//                     transform: translate(-50%, -50%);
+//                     // transform: rotate(90deg);
+//                     transform-origin: center;
+//                     background-color: $color-grigio-due;
+//                 }
+//             }
+
+//             @each $prog_name,
+//             $prog_value in $progressione {
+//                 .line__#{$prog_name} {
+//                     $top: $top +$prog_value;
+//                     top: $top;
+//                 }
+//             }
+//         }
+//     }
+// }
+
 .upper__menu__row {
-    .navbar-toggler {
-        border: 1px solid $color-grigio-due;
+    #button__opener {
+        display: none;
 
-        .navbar-toggler-icon {
-            .line {
-                position: relative;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    // display: block;
-                    width: 90%;
-                    height: 3px;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    // transform: rotate(90deg);
-                    transform-origin: center;
-                    background-color: $color-grigio-due;
-                }
+        &:checked+#label__button__opener {
+            .line__uno {
+                transform: rotate(45deg);
+                transform-origin: -6px;
+                top: 3px;
+                left: 35%;
+                background-color: $color-verde-due;
             }
 
-            $progressione: (
-                uno: 16,
-                due: 32,
-                tre: 36
-            );
-        $top: 0%;
+            .line__due {
+                transform: scale(0);
+            }
 
-        @each $prog_name,
-        $prog_value in $progressione {
-            .line__#{$prog_name} {
-                $top: $top +$prog_value;
-                top: $top;
+            .line__tre {
+                transform: rotate(-45deg);
+                transform-origin: 5px;
+                top: 18px;
+                left: 8px;
+                background-color: $color-verde-due;
             }
         }
     }
-}
+
+    #label__button__opener {
+        display: none;
+        position: relative;
+        border: 3px solid $color-grigio-due;
+        width: 40px;
+        height: 35px;
+        cursor: pointer;
+
+        .line {
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-grigio-due;
+            transition: .3s all $ease-out;
+        }
+
+        @include media(lg) {
+            & {
+                display: block;
+            }
+        }
+    }
+
+    @each $prog_name,
+    $prog_value in $progressione {
+        .line__#{$prog_name} {
+            $top: $top +$prog_value;
+            top: $top;
+        }
+    }
 }

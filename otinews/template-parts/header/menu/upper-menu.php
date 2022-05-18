@@ -1,13 +1,13 @@
 <div class="row upper__menu__row">
     <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-                <div class="line line__uno"></div>
-                <div class="line line__due"></div>
-                <div class="line line__tre"></div>
-            </span>
-        </button>
+        <input class="navbar-toggler" id="button__opener" type="checkbox" data-bs-toggle="collapse"
+            data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <label class="navbar-toggler-icon" for="button__opener" id="label__button__opener">
+            <div class="line line__uno"></div>
+            <div class="line line__due"></div>
+            <div class="line line__tre"></div>
+        </label>
 
         <div class="col-md-4"></div>
         <div class="upper__date col-md-3">
