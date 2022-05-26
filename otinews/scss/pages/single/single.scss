@@ -10,11 +10,61 @@
     padding: 0 25px 25px;
 }
 
-.single__content p {
-    @extend %description-21;
-    line-height: 24px;
-    padding: 15px 0;
-    margin-bottom: 0;
+.single__content {
+    h2 {
+        @extend %title-25;
+        color: $color-verde-tre;
+        font-weight: bold;
+    }
+
+    h3 {
+        @extend %title-24;
+        color: $color-verde-tre;
+        font-weight: bold;
+    }
+
+    h4,
+    h5,
+    h6,
+    h7 {
+        @extend %title-21;
+        color: $color-verde-tre;
+        font-weight: bold;
+    }
+
+    p {
+        @extend %description-21;
+        line-height: 24px;
+        padding: 15px 0;
+        margin-bottom: 0;
+    }
+
+    ul,
+    ol {
+        padding: 10px 40px;
+    }
+
+    ol {
+        list-style: linear-gradient;
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    strong {
+        @include font-family-din-pro-bold {
+            color: $color-verde-tre;
+        }
+    }
+
+    em {
+        @include font-family-din-pro-light {
+            color: $color-verde-tre;
+            font-style: italic;
+        }
+    }
+
 }
 
 /* Da spostare nel proprio foglio di stile (da creare) */

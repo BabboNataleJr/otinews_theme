@@ -1,0 +1,16 @@
+@include media(lg) {
+    .front__widget__wrapper {
+
+        // display: none;
+
+        .newsletter__widget {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+}

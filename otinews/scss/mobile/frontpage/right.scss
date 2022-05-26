@@ -1,7 +1,7 @@
 @include media(xl) {
     .post__thumbnail__right {
         .post__info {
-            top: 60%;
+            top: 50%;
             left: 10px;
         }
     }
@@ -10,5 +10,19 @@
 @include media(lg) {
     .right__last__space {
         display: none;
+    }
+
+    .post__info {
+        top: 40%;
+    }
+}
+
+@include media(sm) {
+    .right__last__space {
+        display: none;
+    }
+
+    .post__info {
+        top: 60%;
     }
 }

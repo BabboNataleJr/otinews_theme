@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-12">
+        <label class="form pt-2 pb-2 nome" for="nome__input">Nome/Ragione sociale*:</label>
+        [text* nome id:nome__input class:form-control class:field-split placeholder "Inserisci il nome/ragione sociale
+        (obbligatorio)"]
+    </div>
+    <div class="col-lg-12 col-md-12 col-12">
+        <label class="form pt-2 pb-2 email" for="email__input"> Email*:</label>
+        [email* email id:email__input class:form-control class:field-split placeholder "Inserisci l'email
+        (obbligatorio)"]
+    </div>
+    <div class="col-lg-12 col-md-12 col-12">
+        <label class="form pt-2 pb-2 categoria" for="select__categoria">Categoria*:</label>
+        [select* menu-540 id:select__categoria class:form-select include_blank "Azienda" "Centro Benessere"
+        "Erboristeria"
+        "Farmacia"
+        "Medico"
+        "Nutrizionista" "Palestra e Fitness" "Parafarmacia" "Privato" "Stabilimento termale" "Altro"]
+    </div>
+    <div class="col-lg-12 col-md-12 col-12">
+        <label class="form pt-2 pb-2 tipologia" for="select__tipologia">Tipologia*:</label>
+        [select* menu-540 id:select__tipologia class:form-select include_blank "Informazioni commerciali" "Informazioni
+        tecnico
+        scientifiche"]
+    </div>
+    <div class="col-lg-12 col-md-12 col-12">
+        <label class="form telefono pt-2 pb-2" for="input__telefono">Telefono*:</label>
+        [tel* tel-614 id:input__telefono class:form-control placeholder "0000000000"]
+    </div>
+    <div class="col-lg-12 col-md-12 col-12">
+        <label class="form oggetto pt-2 pb-2" for="input__oggetto">Oggetto*:</label>
+        [text* oggetto id:input__oggetto class:form-control placeholder "Inserisci l'oggetto (obbligatorio)"]
+    </div>
+    <div class="col-lg-12 col-md-12 col-12">
+        <label class="form messaggio pt-2 pb-2" for="input__messaggio">Messaggio:</label>
+        [textarea* message id:input__messaggio class:form-control placeholder "Inserisci il tuo messaggio
+        (obbligatorio)"]
+    </div>
+    <div class="col-lg-12 col-md-12 col-12 pt-2 pb-2">
+        <strong><em>I campi contrassegnati con * sono obbligatori.</em></strong>
+    </div>
+    <div class="col-lg-12 col-md-12 col-12">
+        [submit id:submit__form__button class:btn class:btn-outline-success "INVIA"]
+    </div>
+</div>
+
+
+
+<!-- Form newsletter -->
+
+<div class="newsletter__widget">
+    <h6>Iscriviti alla nostra newsletter!</h6>
+    <a href="/newsletter">Clicca qui</a>
+</div>

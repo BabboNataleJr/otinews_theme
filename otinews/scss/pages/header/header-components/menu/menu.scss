@@ -8,11 +8,27 @@
     }
 }
 
+.upper__menu {
+    .newsletter__nav__link {
+        .nav-link {
+            background-color: $color-verde-tre;
+            color: #fff;
+            transition: .3 all $ease-out;
+            padding: .5rem 5px;
+
+            &:hover {
+                color: $color-verde-tre;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
 .active {
     .nav-link {
         position: relative;
 
-        &::before {
+        &::after {
             content: "";
             width: 100%;
             height: 5px;

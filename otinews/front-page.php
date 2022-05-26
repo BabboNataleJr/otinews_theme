@@ -21,13 +21,13 @@
             $postes->the_post();
             $post_id                    =   get_the_ID(); // or use the post id if you already have i
             $category_object            =   get_the_category($post_id);
-            $category_name              =   strtolower($category_object[0]->name);
+            $category_name              =   strtolower($category_object[0]->slug);
             switch($category_name) :
-                case 'new': 
+                case 'top': 
                     $post_data['position']['left'][]        =   $postes->posts[$i];
                     $non_duplicare[]                        =   $postes->posts[$i]->ID;
                     break;
-                case 'important':
+                case 'in_evidenza':
                     $post_data['position']['right'][]       =   $postes->posts[$i];
                     $non_duplicare[]                        =   $postes->posts[$i]->ID;
                     break;
@@ -65,12 +65,21 @@
         <div class="row front__page__front__post__from__blog">
             <?php 
                 if( have_posts() ) :
+                    ?>
+            <div class="col-0 col-md-1 col-lg-2"></div>
+            <div class="col-lg-6 col-md-8 col-12 front__posts">
+                <?php
                     while( have_posts()) : 
                         the_post();
                         if ( in_array( $post->ID, $non_duplicare ) ) continue;
                         get_template_part('template-parts/frontpage/content', 'front'); 
                     endwhile;
                 ?>
+            </div>
+            <div class="col-md-2 front__widget__wrapper">
+                <?php dynamic_sidebar( 'newsletter-widget'); ?>
+            </div>
+            <div class="col-md-1"></div>
             <div class="front__pagination__links row">
                 <div class="col-md-2"></div>
                 <div class="col-md-6 text-center front__pagination__bar">

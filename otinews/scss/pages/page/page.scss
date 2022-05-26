@@ -17,12 +17,17 @@
             color: $color-verde-tre;
             padding: 20px 0;
 
-            strong {
-                color: inherit;
-                padding: inherit;
-            }
         }
 
+    }
+
+    strong {
+        color: inherit;
+        padding: inherit;
+    }
+
+    em {
+        font-style: italic;
     }
 
     p {

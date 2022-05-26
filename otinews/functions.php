@@ -48,10 +48,8 @@
     {
         $theme_domain = wp_get_theme()->get( 'Text Domain' );
         $locations = array(
-            'otinews-header-menu'           => __('Otinews Header Menu', "$theme_domain"),
-            'otinews-footer-menu'           => __('Otinews Footer Menu', "$theme_domain"),
-            'otinews-upper-title-menu'      => __( 'Navwalker Menu above the logo', "$theme_domain"),
-            'otinews-bottom-title-menu'     => __( 'Navwalker Menu under the logo', "$theme_domain"),
+            'otinews-upper-title-menu'      => __( 'Navwalker Menu above the logo (used in the footer also)', "$theme_domain"),
+            'otinews-bottom-title-menu'     => __( 'Navwalker Menu under the logo (for the categories)', "$theme_domain"),
         );
         register_nav_menus( $locations );
     }
@@ -84,7 +82,7 @@
         );
         register_sidebar($footer_bar_options);
         
-        $footer_bar_options['name'] = 'Social Icon Area';
+        $footer_bar_options['name'] = 'Footer Social Icon Area';
         $footer_bar_options['description'] = 'Insert the social icon you want to see on the screen';
         $footer_bar_options['id'] = 'social-icon-widget';
         register_sidebar($footer_bar_options);
@@ -92,6 +90,11 @@
         $footer_bar_options['name'] = 'Footer Widget Area 3';
         $footer_bar_options['description'] = 'Footer Widget Area 3';
         $footer_bar_options['id'] = 'footer-bar-3';
+        register_sidebar($footer_bar_options);
+        
+        $footer_bar_options['name'] = 'Newsletter Widget';
+        $footer_bar_options['description'] = 'Insert the text you want on the newsletter';
+        $footer_bar_options['id'] = 'newsletter-widget';
         register_sidebar($footer_bar_options);
     }
 
