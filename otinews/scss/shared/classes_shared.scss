@@ -106,7 +106,7 @@
         .line {
             position: absolute;
             width: 60%;
-            height: 2px;
+            height: $base-border-widht;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: $color-grigio-due;

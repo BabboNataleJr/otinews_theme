@@ -1,10 +1,9 @@
 @import "./single-template/titlethumbnail";
 @import "./single-template/content/header";
-@import "./single-template/content/tags";
 
 .single__post__content__wrapper {
-    border-right: 2px solid;
-    border-left: 2px solid;
+    border-right: $base-border-widht solid;
+    border-left: $base-border-widht solid;
     margin-top: -80px;
     background-color: $color-bianco;
     padding: 0 25px 25px;
@@ -74,8 +73,8 @@
 
 .single__prev__post,
 .single__next__post {
-    border-top: 2px solid;
-    border-bottom: 2px solid;
+    border-top: $base-border-widht solid;
+    border-bottom: $base-border-widht solid;
     padding: 25px 15px;
     position: relative;
 
@@ -91,8 +90,8 @@
     }
 
     @include media(lg) {
-        border-left: 2px solid;
-        border-right: 2px solid;
+        border-left: $base-border-widht solid;
+        border-right: $base-border-widht solid;
         margin: 5px 0;
     }
 }
@@ -131,3 +130,5 @@
 .post__thumbnail__single .wp-post-image {
     height: 300px;
 }
+
+@import "./single-template/content/tags";

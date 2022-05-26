@@ -5,7 +5,7 @@
     }
 
     text-align: center;
-    border-bottom: 2px solid $color-nero;
+    border-bottom: $base-border-widht solid $color-nero;
     padding: 5px 0;
 }
 
@@ -24,5 +24,9 @@
 
     span {
         vertical-align: unset;
+
+        img {
+            transform: scale(1.5);
+        }
     }
 }

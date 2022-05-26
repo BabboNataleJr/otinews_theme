@@ -2,7 +2,7 @@
 @import './header-components/upper';
 
 .header {
-    border-bottom: 2px solid;
+    border-bottom: $base-border-widht solid;
 }
 
 .site__title__director__name {

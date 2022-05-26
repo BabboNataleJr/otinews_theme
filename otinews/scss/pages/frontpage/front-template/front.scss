@@ -3,7 +3,7 @@
 
     .front-content {
         padding: 50px 30px 60px;
-        border-bottom: 2px solid $color-nero;
+        border-bottom: $base-border-widht solid $color-nero;
 
         .wp-post-image {
             width: 100%;
@@ -15,8 +15,8 @@
 
 
 .front__posts {
-    border-left: 2px solid $color-nero;
-    border-right: 2px solid $color-nero;
+    border-left: $base-border-widht solid $color-nero;
+    border-right: $base-border-widht solid $color-nero;
     padding: 40px;
 
     &:hover {
@@ -50,7 +50,7 @@
     p {
         @include font-family-din-pro-light {
             @extend %description-14;
-            line-height: 14px;
+            line-height: 1.4;
         }
     }
 }
@@ -62,7 +62,7 @@
     .content__front__permalink {
         transition: .3s all $ease-out;
 
-        @include font-family-din-pro-light {
+        @include font-family-din-pro {
             @extend %description-16;
             color: $color-verde-tre;
             text-decoration: none;

@@ -4,7 +4,7 @@
 @import "./front-template/newsletter_wrapper";
 
 .front__page__left__right__wrapper {
-    border-bottom: 2px solid;
+    border-bottom: $base-border-widht solid;
 }
 
 .left__column,
@@ -50,6 +50,7 @@
 
 .category__link {
     text-decoration: none;
+    @include font-family-din-pro-bold;
 }
 
 .post__thumbnail {

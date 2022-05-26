@@ -6,16 +6,37 @@
 
     margin-top: 25px;
     display: inline-block;
-    border-bottom: 2px solid;
+    border-bottom: $base-border-widht solid;
     width: 45%;
 }
 
-.tags__cloud__tags {
-    list-style-type: none;
-}
+.right__category__menu__wrapper {
 
-.tags__tag__item__link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li:hover {
+            .nav-link {
+                color: $color-verde-tre;
+            }
+        }
+
+        // .active {
+        //     .nav-link::after {
+        //         content: "";
+        //         // width: 0;
+        //     }
+        // }
+    }
+
+    .nav-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: $color-nero;
+        transition: .3s all $ease-out;
+        width: fit-content;
+    }
+
 }

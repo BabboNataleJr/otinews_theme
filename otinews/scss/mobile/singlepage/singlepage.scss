@@ -1,0 +1,17 @@
+@include media(md) {
+    .single__post__title {
+        h1 {
+            font-size: 2rem;
+            line-height: 35px;
+        }
+    }
+}
+
+@include media(sm) {
+    .single__post__title {
+        h1 {
+            font-size: 1.5rem;
+            line-height: 25px;
+        }
+    }
+}
